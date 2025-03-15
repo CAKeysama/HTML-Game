@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Parry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- HUD Principal -->
+        <div class="hud">
+            <div class="hud-item">
+                <i class="fas fa-star"></i>
+                <span id="score">0</span>
+            </div>
+            <div class="hud-item">
+                <i class="fas fa-heart"></i>
+                <span id="health">100</span>
+            </div>
+        </div>
+
+        <!-- Barra de XP -->
+        <div class="xp-bar">
+            <div class="xp-bar-fill"></div>
+        </div>
+        <div class="player-level">Nível 1</div>
+
+        <!-- Barra de Cooldown -->
+        <div class="cooldown-container">
+            <div class="cooldown-bar"></div>
+        </div>
+
+        <!-- Tela de Tutorial -->
+        <div class="tutorial-screen">
+            <div class="tutorial-content">
+                <h1>Como Jogar</h1>
+                <div class="controls">
+                    <h2>Controles</h2>
+                    <p><i class="fas fa-keyboard"></i> WASD - Movimento</p>
+                    <p><i class="fas fa-space-shuttle"></i> ESPAÇO - Parry</p>
+                </div>
+                <div class="objective">
+                    <h2>Objetivo</h2>
+                    <p><i class="fas fa-shield-alt"></i> Use o parry para refletir projéteis vermelhos</p>
+                    <p><i class="fas fa-skull"></i> Mate inimigos com projéteis refletidos</p>
+                    <p><i class="fas fa-gem"></i> Colete orbs verdes para ganhar XP e power-ups</p>
+                </div>
+                <button id="startButton">Começar Jogo</button>
+            </div>
+        </div>
+
+        <!-- Tela de Power-up -->
+        <div class="power-up-screen hidden">
+            <div class="power-up-content">
+                <h1>Level Up!</h1>
+                <p>Escolha um power-up para melhorar suas habilidades</p>
+                <div class="power-up-options"></div>
+            </div>
+        </div>
+
+        <!-- Tela de Game Over -->
+        <div class="game-over hidden">
+            <div class="game-over-content">
+                <h1>Game Over</h1>
+                <p>Pontuação Final: <span id="finalScore">0</span></p>
+                <button id="restartButton">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
